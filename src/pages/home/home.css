@@ -1,6 +1,8 @@
 .home-container {
   font-family: Arial, sans-serif;
   color: #333;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -13,10 +15,11 @@ nav ul {
   justify-content: center;
   list-style-type: none;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 1rem;
+  margin: 0.5rem;
 }
 
 nav ul li a {
@@ -25,30 +28,17 @@ nav ul li a {
   font-weight: bold;
 }
 
-.hero {
-  display: flex;
-  background-color: #000080;
-  color: white;
-  padding: 2rem;
-}
-
-.hero-content {
-  flex: 1;
-}
-
-.hero-image {
-  flex: 1;
-}
-
 .features {
   display: flex;
+  flex-wrap: wrap;
   padding: 2rem;
   background-color: #f0f0f0;
 }
 
 .feature {
-  flex: 1;
+  flex: 1 1 300px;
   padding: 1rem;
+  min-width: 300px;
 }
 
 .video-section {
@@ -70,6 +60,7 @@ nav ul li a {
   padding: 1rem 2rem;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .quienes-somos {
@@ -90,11 +81,13 @@ nav ul li a {
 
 .quienes-somos-flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .quienes-somos-image {
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 300px;
 }
 
 .quienes-somos-image img {
@@ -104,7 +97,8 @@ nav ul li a {
 }
 
 .quienes-somos-text {
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 300px;
 }
 
 .quienes-somos-text p {
@@ -112,24 +106,39 @@ nav ul li a {
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .quienes-somos-flex {
-    flex-direction: column;
-  }
-}
-
-.learn-more-button {
-  background-color: #FFD700;
-  color: #000080;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 footer {
   background-color: #000080;
   color: white;
   padding: 1rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .quienes-somos h2 {
+    font-size: 2rem;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quienes-somos h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature, .quienes-somos-image, .quienes-somos-text {
+    min-width: 100%;
+  }
 }

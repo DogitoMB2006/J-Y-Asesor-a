@@ -11,13 +11,12 @@ function Home() {
           <ul>
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
-            <li><a href="#nuestros-servicios">NUESTROS SERVICIOS</a></li>
+            <li><a href="#nuestros-servicios">SERVICIOS</a></li>
             <li><a href="#testimonios">TESTIMONIOS</a></li>
-            <li><a href="#contactanos">CONTACTANOS</a></li>
+            <li><a href="#contactanos">CONTACTO</a></li>
           </ul>
         </nav>
       </header>
-
 
       <main>
         <Hero />
@@ -37,10 +36,10 @@ function Home() {
 
         <section className="cta-section">
           <h3>¡Nuestro compromiso es ofrecerte soluciones efectivas para cualquier consulta o inquietud que tengas!</h3>
-          <button className="whatsapp-button">CONTÁCTANOS VÍA WHATSAPP PARA AYUDARTE</button>
+          <button className="whatsapp-button">CONTÁCTANOS VÍA WHATSAPP</button>
         </section>
         
-        <section className="quienes-somos">
+        <section className="quienes-somos" id="quienes-somos">
           <div className="quienes-somos-content">
             <h2>¿QUIÉNES SOMOS?</h2>
             <div className="quienes-somos-flex">
@@ -48,24 +47,16 @@ function Home() {
                 <img src="https://www.buhlerthomaslaw.com/wp-content/uploads/2017/06/Depositphotos_12892153_s-2015.jpg" alt="Formulario DS-160" />
               </div>
               <div className="quienes-somos-text">
-                <p>
-                  VisaParaTurista.com ofrece un servicio completo de asesoría y acompañamiento para la obtención de la visa americana de turismo. Tenemos un equipo de expertos altamente calificados y con experiencia en trámites de visado para brindar la orientación necesaria para la obtención de la visa B1 Y B2, individual, familiar y/o grupal. Nuestros profesionales tienen amplios conocimientos en el diligenciamiento del formulario DS-160, así como en el perfilamiento personalizado para la entrevista con el oficial consular de cada uno de nuestros clientes.
-                </p>
-                <p>
-                  Así mismo, VisaParaTurista.com ofrece asesoría en cada paso del proceso de solicitud de visa americana para turistas, desde la presentación de documentos hasta la obtención de la visa. Estamos al tanto de los requerimientos informativos, de seguridad y de aprobación de visas.
-                </p>
-                <p>
-                  Nuestro conocimiento en el diligenciamiento del formulario DS-160, así como nuestro perfilamiento personalizado y preparación para la entrevista con el oficial consular, han demostrado ser de gran ayuda para quienes nos confían su proceso de visa. Gracias a nuestra experiencia y conocimiento, hemos logrado aumentar significativamente las probabilidades de aprobación de nuestros clientes.
-                </p>
+                <p>VisaParaTurista.com ofrece un servicio completo de asesoría y acompañamiento para la obtención de la visa americana de turismo. Tenemos un equipo de expertos altamente calificados y con experiencia en trámites de visado para brindar la orientación necesaria para la obtención de la visa B1 Y B2, individual, familiar y/o grupal.</p>
+                <p>Nuestros profesionales tienen amplios conocimientos en el diligenciamiento del formulario DS-160, así como en el perfilamiento personalizado para la entrevista con el oficial consular de cada uno de nuestros clientes.</p>
+                <p>Gracias a nuestra experiencia y conocimiento, hemos logrado aumentar significativamente las probabilidades de aprobación de nuestros clientes.</p>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer>
-        {/* Add footer content here */}
-      </footer>
+     
     </div>
   );
 }
