@@ -11,7 +11,7 @@ const testimonials = [
     author: "Usuario2"
   },
   {
-    text: "El servicio personalizado y la atención al detalle de VisaParaTurista.com realmente marcan la diferencia.",
+    text: "El servicio personalizado y la atención al detalle de J&Y realmente marcan la diferencia.",
     author: "Usuario3"
   },
   {
