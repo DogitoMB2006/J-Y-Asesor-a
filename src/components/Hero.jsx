@@ -89,7 +89,7 @@ const Hero = () => {
               <h2>Contacta con nosotros</h2>
               <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos a través de WhatsApp.</p>
               <motion.a 
-                href="https://wa.me/18097903224" 
+                href="https://wa.me/18496533224" 
                 className="whatsapp-button"
                 animate={controls} // Aplica la animación al botón
               >
