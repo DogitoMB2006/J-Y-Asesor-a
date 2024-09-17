@@ -32,7 +32,9 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="hero-title"
         >
-          J&Y Oficina Virtual
+          J&Y Visado! 
+          <br />
+          Officina virtual.
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -40,8 +42,8 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="hero-subtitle"
         >
-          <h2>ASESORÍA Y AYUDA PARA REALIZAR</h2>
-          <h2>TU SOLICITUD DE VISA</h2>
+          <h4>ASESORÍA Y AYUDA PARA REALIZAR</h4>
+          <h4>TU SOLICITUD DE VISA DE TURISTA.</h4>
         </motion.div>
         <motion.h3 
           initial={{ opacity: 0, scale: 0.8 }}
@@ -49,7 +51,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="hero-tagline"
         >
-          FÁCIL, RÁPIDA Y ONLINE
+          FÁCIL, RÁPIDA Y ONLINE.
         </motion.h3>
         <motion.button 
           initial={{ opacity: 0, y: 50 }}

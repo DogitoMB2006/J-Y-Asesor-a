@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h2>J&Y Asesoría de Visas de Turista USA</h2>
+        <h2>J&Y Visado, Asesoría de Visas de Turista USA</h2>
         <p>© 2024 J&Y Asesoría. Todos los derechos reservados.</p>
         <div className="footer-social">
           <a href="#facebook" aria-label="Facebook">
