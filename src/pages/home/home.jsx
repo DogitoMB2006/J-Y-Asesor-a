@@ -6,17 +6,6 @@ import Testimonials from '../../components/Testimonials';
 function Home() {
   return (
     <div className="home-container">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
-            <li><a href="#nuestros-servicios">SERVICIOS</a></li>
-            <li><a href="#testimonios">TESTIMONIOS</a></li>
-            <li><a href="#contactanos">CONTACTO</a></li>
-          </ul>
-        </nav>
-      </header>
 
       <main>
         <Hero />
