@@ -32,7 +32,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="hero-title"
         >
-          J&C Oficina Virtual
+          J&Y Oficina Virtual
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
