@@ -36,7 +36,7 @@ function Home() {
         <img src="https://www.buhlerthomaslaw.com/wp-content/uploads/2017/06/Depositphotos_12892153_s-2015.jpg" alt="Formulario DS-160" />
       </div>
       <div className="quienes-somos-text">
-        <p>VisaParaTurista.com ofrece un servicio completo de asesoría y acompañamiento para la obtención de la visa americana de turismo. Tenemos un equipo de expertos altamente calificados y con experiencia en trámites de visado para brindar la orientación necesaria para la obtención de la visa B1 Y B2, individual, familiar y/o grupal.</p>
+        <p>J&Y ofrece un servicio completo de asesoría y acompañamiento para la obtención de la visa americana de turismo. Tenemos un equipo de expertos altamente calificados y con experiencia en trámites de visado para brindar la orientación necesaria para la obtención de la visa B1 Y B2, individual, familiar y/o grupal.</p>
         <p>Nuestros profesionales tienen amplios conocimientos en el diligenciamiento del formulario DS-160, así como en el perfilamiento personalizado para la entrevista con el oficial consular de cada uno de nuestros clientes.</p>
         <p>Gracias a nuestra experiencia y conocimiento, hemos logrado aumentar significativamente las probabilidades de aprobación de nuestros clientes.</p>
       </div>
