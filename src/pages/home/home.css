@@ -1,0 +1,144 @@
+body {
+  font-family: 'Arial', sans-serif; /* Fuente general */
+  background-color: #f0f2f5; /* Color de fondo suave */
+}
+
+.title-services, .title-why-choose-us {
+  font-size: 2.5rem; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  color: #000b82; /* Color azul oscuro */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  position: relative; /* Para el efecto de subrayado */
+}
+
+.title-services::after, .title-why-choose-us::after {
+  content: ''; /* Crear un pseudo-elemento */
+  display: block; /* Mostrar como bloque */
+  width: 50%; /* Ancho del subrayado */
+  height: 4px; /* Altura del subrayado */
+  background: #007bff; /* Color del subrayado */
+  margin: 10px auto 0; /* Centrar el subrayado */
+  border-radius: 2px; /* Bordes redondeados */
+}
+
+.testimonials-section {
+  margin: 40px 0;
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 40px 0; /* Espaciado superior e inferior */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco más opaco */
+  border-radius: 15px; /* Bordes más redondeados */
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+}
+
+.testimonial-text {
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #333; /* Color del texto gris oscuro */
+  font-style: italic; /* Estilo de texto en cursiva */
+  transition: color 0.3s; /* Suaviza el cambio de color */
+}
+
+.testimonial-text:hover {
+  color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.testimonial-title {
+  color: #000; /* Color negro */
+  transition: transform 0.3s; /* Suaviza la transición */
+  font-weight: bold; /* Negrita para el título */
+}
+
+.testimonial-title:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  filter: invert(1); /* Cambiar color de los controles a blanco */
+}
+
+.carousel-item {
+  transition: transform 0.5s ease; /* Suaviza la transición entre elementos */
+}
+
+.services-card {
+  margin: 20px;
+}
+
+.animated-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.animated-card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 600px; 
+  height: auto; 
+}
+
+/* Estilos para el modal */
+.modal-content {
+  background-color: white;
+  color: black;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blur {
+  filter: blur(5px); 
+  transition: filter 0.5s ease; 
+}
