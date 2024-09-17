@@ -1,11 +1,27 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import './hero.css';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const controls = useAnimation(); // Inicializa el control de animación
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      controls.start({
+        rotate: [0, -5, 5, -5, 5, 0],
+        transition: { 
+          duration: 0.5, 
+          repeat: 5, 
+          repeatType: "reverse" 
+        }
+      });
+    } else {
+      controls.stop(); // Detiene la animación cuando el modal se cierra
+    }
+  }, [isModalOpen, controls]);
 
   return (
     <section className="hero">
@@ -16,7 +32,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="hero-title"
         >
-          J&Y Oficina Virtual
+          J&C Oficina Virtual
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -40,6 +56,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="hero-cta"
+          onClick={toggleModal}
         >
           Solicita tu asesoría ahora
         </motion.button>
@@ -50,9 +67,10 @@ const Hero = () => {
           alt="J&C Oficina Virtual" 
           className="hero-image"
           whileHover={{ scale: 1.05 }}
-          onClick={toggleModal}
         />
       </div>
+
+      {/* Modal para WhatsApp */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div 
@@ -68,11 +86,15 @@ const Hero = () => {
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <img 
-                src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=638&height=638" 
-                alt="J&C Oficina Virtual" 
-                className="modal-image"
-              />
+              <h2>Contacta con nosotros</h2>
+              <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos a través de WhatsApp.</p>
+              <motion.a 
+                href="https://wa.me/18097903224" 
+                className="whatsapp-button"
+                animate={controls} // Aplica la animación al botón
+              >
+                Escríbenos al WhatsApp
+              </motion.a>
               <motion.button 
                 className="modal-close"
                 onClick={toggleModal}
