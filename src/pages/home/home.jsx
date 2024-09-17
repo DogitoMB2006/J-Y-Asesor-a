@@ -63,8 +63,8 @@ function Home() {
       <div className="top-sections">
         <div className="container">
           <h2 className="display-4 text-center title-services">Ofrecemos Soluciones Integrales</h2>
-          <div className="services-card">
-            <div className="card animated-card">
+          <div className="services-card d-flex justify-content-center">
+            <div className="card animated-card mx-2 flag-border">
               <div className="card-body text-center">
                 <h5 className="card-title">Preparación de Documentos</h5>
                 <ul>
@@ -75,9 +75,13 @@ function Home() {
                 </ul>
               </div>
             </div>
+            <div className="card animated-card mx-2 flag-border">
+              <div className="card-body text-center">
+                <h5 className="card-title">Razones para Confiar en Nosotros</h5>
+                <p>Somos expertos en brindar la mejor asesoría para obtener tu visa de turista a los Estados Unidos.</p>
+              </div>
+            </div>
           </div>
-          <h2 className="display-4 text-center title-why-choose-us">Razones para Confiar en Nosotros</h2>
-          <p className="text-center">Somos expertos en brindar la mejor asesoría para obtener tu visa de turista a los Estados Unidos.</p>
           <Testimonials />
         </div>
       </div>
@@ -85,7 +89,12 @@ function Home() {
       <div className={`main-content ${isBlurred ? 'blur' : ''}`} style={{ backgroundColor: '#000b82', padding: '20px 0' }}>
         <h2 className="display-4 text-center text-white">Contáctanos</h2>
         <div className="contact-container d-flex flex-column align-items-center justify-content-center mx-auto p-4">
-          <img src="https://media.discordapp.net/attachments/1274216273823268926/1285280500600274996/4ed0280c-5cdc-4584-adf6-ffcea6660e6a.jpg?ex=66e9b23e&is=66e860be&hm=3ecb1fb172adcf6cb33b9afd13ec9f20d8c2531684f25664ae927c36b3c29754&=&format=webp&width=638&height=638" alt="Imagen de contacto" className="contact-image img-fluid rounded mb-4"/>
+          <img 
+            src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=800&height=800" 
+            alt="Imagen de contacto" 
+            className="contact-image img-fluid rounded mb-4" 
+            style={{ maxWidth: '800px', width: '100%', height: 'auto' }} // Aumentar el tamaño y calidad
+          />
           <div className="canvas-container mb-3">
             <canvas ref={canvasRef} width={150} height={70}></canvas>
           </div>

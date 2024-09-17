@@ -1,12 +1,14 @@
 body {
   font-family: 'Arial', sans-serif; /* Fuente general */
-  background-color: #f0f2f5; /* Color de fondo suave */
+  margin: 0; /* Eliminar márgenes por defecto */
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.7), rgba(255, 255, 255, 0.7), rgba(0, 0, 255, 0.7)); /* Degradado de rojo a blanco a azul con transparencia */
+  height: 100vh; /* Altura completa de la ventana */
 }
 
 .title-services, .title-why-choose-us {
   font-size: 2.5rem; /* Tamaño de fuente más grande */
   font-weight: bold; /* Negrita */
-  color: #000b82; /* Color azul oscuro */
+  color: #0033cc; /* Color azul */
   text-transform: uppercase; /* Texto en mayúsculas */
   margin: 20px 0; /* Espaciado superior e inferior */
   position: relative; /* Para el efecto de subrayado */
@@ -17,17 +19,22 @@ body {
   display: block; /* Mostrar como bloque */
   width: 50%; /* Ancho del subrayado */
   height: 4px; /* Altura del subrayado */
-  background: #007bff; /* Color del subrayado */
+  background: #ff0000; /* Color rojo */
   margin: 10px auto 0; /* Centrar el subrayado */
   border-radius: 2px; /* Bordes redondeados */
 }
 
 .testimonials-section {
   margin: 40px 0;
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
   padding: 40px 0; /* Espaciado superior e inferior */
   border-radius: 15px; /* Bordes redondeados */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Suaviza la transición */
+}
+
+.testimonials-section:hover {
+  transform: scale(1.02); /* Aumenta ligeramente al pasar el mouse */
 }
 
 .testimonial-card {
@@ -52,7 +59,7 @@ body {
 }
 
 .testimonial-text:hover {
-  color: #007bff; /* Cambia el color al pasar el mouse */
+  color: #0033cc; /* Cambia el color al pasar el mouse */
 }
 
 .testimonial-title {
@@ -74,38 +81,43 @@ body {
 }
 
 .services-card {
-  margin: 20px;
+  display: flex;
+  justify-content: center; /* Centrar las tarjetas */
+  margin-bottom: 40px; /* Espaciado inferior */
 }
 
 .animated-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición */
+  width: 300px; /* Ancho fijo para las tarjetas */
+  margin: 10px; /* Espaciado entre tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .animated-card:hover {
-  transform: translateY(-10px); /* Eleva la tarjeta al hacer hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
 }
 
 .card-body {
-  padding: 20px;
+  padding: 15px; /* Espaciado interno reducido */
 }
 
 .card-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+  margin-bottom: 10px; /* Espaciado inferior */
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Eliminar viñetas */
+  padding: 0; /* Eliminar padding */
 }
 
 ul li {
-  margin: 5px 0;
+  margin: 5px 0; /* Espaciado entre elementos de la lista */
+  font-size: 1rem; /* Tamaño de fuente de los elementos de la lista */
 }
 
 .contact-container {
@@ -124,7 +136,7 @@ ul li {
 
 .contact-image {
   width: 100%;
-  max-width: 600px; 
+  max-width: 800px; /* Ajusta según el tamaño deseado */
   height: auto; 
 }
 
@@ -141,4 +153,33 @@ ul li {
 .blur {
   filter: blur(5px); 
   transition: filter 0.5s ease; 
+}
+
+
+.flag-border {
+  border-radius: 20px; /* Bordes redondeados */
+  border: 5px solid transparent; /* Borde transparente para el efecto */
+  position: relative; /* Para el pseudo-elemento */
+  overflow: hidden; /* Para ocultar el contenido que sobresale */
+}
+
+.flag-border::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* Ajustar según el grosor del borde */
+  left: -5px; /* Ajustar según el grosor del borde */
+  right: -5px; /* Ajustar según el grosor del borde */
+  bottom: -5px; /* Ajustar según el grosor del borde */
+  background: linear-gradient(135deg, #b22234 25%, #ffffff 25%, #ffffff 50%, #b22234 50%, #b22234 75%, #ffffff 75%, #ffffff); /* Efecto de la bandera */
+  z-index: -1; /* Colocar detrás del contenido de la tarjeta */
+  animation: borderAnimation 3s infinite; /* Animación de cambio de colores */
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
