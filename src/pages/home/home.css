@@ -1,185 +1,135 @@
-body {
-  font-family: 'Arial', sans-serif; /* Fuente general */
-  margin: 0; /* Eliminar márgenes por defecto */
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.7), rgba(255, 255, 255, 0.7), rgba(0, 0, 255, 0.7)); /* Degradado de rojo a blanco a azul con transparencia */
-  height: 100vh; /* Altura completa de la ventana */
+.home-container {
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-.title-services, .title-why-choose-us {
-  font-size: 2.5rem; /* Tamaño de fuente más grande */
-  font-weight: bold; /* Negrita */
-  color: #0033cc; /* Color azul */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  margin: 20px 0; /* Espaciado superior e inferior */
-  position: relative; /* Para el efecto de subrayado */
+header {
+  background-color: #000080;
+  padding: 1rem 0;
 }
 
-.title-services::after, .title-why-choose-us::after {
-  content: ''; /* Crear un pseudo-elemento */
-  display: block; /* Mostrar como bloque */
-  width: 50%; /* Ancho del subrayado */
-  height: 4px; /* Altura del subrayado */
-  background: #ff0000; /* Color rojo */
-  margin: 10px auto 0; /* Centrar el subrayado */
-  border-radius: 2px; /* Bordes redondeados */
-}
-
-.testimonials-section {
-  margin: 40px 0;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
-  padding: 40px 0; /* Espaciado superior e inferior */
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.3s ease; /* Suaviza la transición */
-}
-
-.testimonials-section:hover {
-  transform: scale(1.02); /* Aumenta ligeramente al pasar el mouse */
-}
-
-.testimonial-card {
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco más opaco */
-  border-radius: 15px; /* Bordes más redondeados */
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
-  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición */
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
-}
-
-.testimonial-text {
-  padding: 20px;
-  font-size: 1.2rem;
-  color: #333; /* Color del texto gris oscuro */
-  font-style: italic; /* Estilo de texto en cursiva */
-  transition: color 0.3s; /* Suaviza el cambio de color */
-}
-
-.testimonial-text:hover {
-  color: #0033cc; /* Cambia el color al pasar el mouse */
-}
-
-.testimonial-title {
-  color: #000; /* Color negro */
-  transition: transform 0.3s; /* Suaviza la transición */
-  font-weight: bold; /* Negrita para el título */
-}
-
-.testimonial-title:hover {
-  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-}
-
-.carousel-control-prev, .carousel-control-next {
-  filter: invert(1); /* Cambiar color de los controles a blanco */
-}
-
-.carousel-item {
-  transition: transform 0.5s ease; /* Suaviza la transición entre elementos */
-}
-
-.services-card {
+nav ul {
   display: flex;
-  justify-content: center; /* Centrar las tarjetas */
-  margin-bottom: 40px; /* Espaciado inferior */
-}
-
-.animated-card {
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
-  border: 1px solid #ddd; /* Borde suave */
-  border-radius: 10px; /* Bordes redondeados */
-  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición */
-  width: 300px; /* Ancho fijo para las tarjetas */
-  margin: 10px; /* Espaciado entre tarjetas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.animated-card:hover {
-  transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
-}
-
-.card-body {
-  padding: 15px; /* Espaciado interno reducido */
-}
-
-.card-title {
-  font-size: 1.5rem; /* Tamaño de fuente del título */
-  margin-bottom: 10px; /* Espaciado inferior */
-}
-
-ul {
-  list-style-type: none; /* Eliminar viñetas */
-  padding: 0; /* Eliminar padding */
-}
-
-ul li {
-  margin: 5px 0; /* Espaciado entre elementos de la lista */
-  font-size: 1rem; /* Tamaño de fuente de los elementos de la lista */
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  max-width: 600px;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  background-color: #000080;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.features {
+  display: flex;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.feature {
+  flex: 1;
+  padding: 1rem;
+}
+
+.video-section {
+  padding: 2rem;
+  background-color: #e0e0e0;
+}
+
+.cta-section {
+  background-color: #000080;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.quienes-somos {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.quienes-somos-content {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-image {
+.quienes-somos h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quienes-somos-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.quienes-somos-image {
+  flex: 1;
+}
+
+.quienes-somos-image img {
   width: 100%;
-  max-width: 800px; /* Ajusta según el tamaño deseado */
-  height: auto; 
+  height: auto;
+  border-radius: 8px;
 }
 
-/* Estilos para el modal */
-.modal-content {
-  background-color: white;
-  color: black;
+.quienes-somos-text {
+  flex: 1;
 }
 
-.modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+.quienes-somos-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-.blur {
-  filter: blur(5px); 
-  transition: filter 0.5s ease; 
-}
-
-
-.flag-border {
-  border-radius: 20px; /* Bordes redondeados */
-  border: 5px solid transparent; /* Borde transparente para el efecto */
-  position: relative; /* Para el pseudo-elemento */
-  overflow: hidden; /* Para ocultar el contenido que sobresale */
-}
-
-.flag-border::before {
-  content: '';
-  position: absolute;
-  top: -5px; /* Ajustar según el grosor del borde */
-  left: -5px; /* Ajustar según el grosor del borde */
-  right: -5px; /* Ajustar según el grosor del borde */
-  bottom: -5px; /* Ajustar según el grosor del borde */
-  background: linear-gradient(135deg, #b22234 25%, #ffffff 25%, #ffffff 50%, #b22234 50%, #b22234 75%, #ffffff 75%, #ffffff); /* Efecto de la bandera */
-  z-index: -1; /* Colocar detrás del contenido de la tarjeta */
-  animation: borderAnimation 3s infinite; /* Animación de cambio de colores */
-}
-
-@keyframes borderAnimation {
-  0% {
-    background-position: 0 0;
+@media (max-width: 768px) {
+  .quienes-somos-flex {
+    flex-direction: column;
   }
-  100% {
-    background-position: 100% 100%;
-  }
+}
+
+.learn-more-button {
+  background-color: #FFD700;
+  color: #000080;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #000080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }

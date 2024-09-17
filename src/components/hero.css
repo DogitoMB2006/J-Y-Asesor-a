@@ -1,0 +1,98 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #000080, #0000ff);
+    color: white;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .hero-tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #FFD700;
+  }
+  
+  .hero-cta {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000080;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Mantén esta transición para una animación suave */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-cta:hover {
+    background-color: #FFA500;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Agregar un efecto de onda al hacer hover */
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+  }
+  
+  .hero-cta:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content {
+      margin-bottom: 2rem;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .hero-tagline {
+      font-size: 1.2rem;
+    }
+  }

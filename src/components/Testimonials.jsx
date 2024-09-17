@@ -1,44 +1,58 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import './Testimonials.css';
+
+const testimonials = [
+  {
+    text: "esto es una prueba",
+    author: "Usuario"
+  },
+  {
+    text: "Gracias a su ayuda, obtuve mi visa de turista sin problemas. ¡Altamente recomendado!",
+    author: "Usuario2"
+  },
+  {
+    text: "El servicio personalizado y la atención al detalle de VisaParaTurista.com realmente marcan la diferencia.",
+    author: "Usuario3"
+  },
+  {
+    text: "Su conocimiento del proceso de visado es impresionante. Me sentí seguro y bien preparado para mi entrevista.",
+    author: "usuario4"
+  },
+  {
+    text: "La asesoría de VisaParaTurista.com fue fundamental para el éxito de mi solicitud de visa. ¡Gracias!",
+    author: "usuario5"
+  }
+];
 
 function Testimonials() {
-  const testimonials = [
-    {
-      text: "Gracias a J&Y Asesoría, obtuve mi visa sin complicaciones.",
-      author: "Cliente 1"
-    },
-    {
-      text: "El servicio fue excelente y muy profesional.",
-      author: "Cliente 2"
-    },
-    {
-      text: "Recomiendo totalmente esta asesoría, son los mejores.",
-      author: "Cliente 3"
-    },
-    {
-      text: "Me ayudaron en cada paso del proceso, ¡fantástico!",
-      author: "Cliente 4"
-    },
-    {
-      text: "Una experiencia increíble, muy satisfecho con el resultado.",
-      author: "Cliente 5"
-    }
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000); // Cambia cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="testimonials-section">
-      <h2 className="display-4 text-center">Testimonios</h2>
-      <Carousel>
-        {testimonials.map((testimonial, index) => (
-          <Carousel.Item key={index}>
-            <div className="testimonial-text text-center">
-              <p>"{testimonial.text}"</p>
-              <h5>- {testimonial.author}</h5>
-            </div>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+    <section className="testimonials">
+      <h2>Testimonios</h2>
+      <div className="testimonial-slider">
+  {testimonials.map((testimonial, index) => (
+    <div
+      key={index}
+      className={`testimonial ${index === currentIndex ? 'active' : ''}`}
+    >
+      <div className="testimonial-content">
+        <p className="testimonial-text">"{testimonial.text}"</p>
+        <p className="testimonial-author">- {testimonial.author}</p>
+      </div>
     </div>
+  ))}
+</div>
+
+    </section>
   );
 }
 

@@ -1,165 +1,71 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import './home.css';
-import { Modal, Button, Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Hero from '../../components/Hero';
+import Testimonials from '../../components/Testimonials';
 
 function Home() {
-  const canvasRef = useRef(null);
-  const [showModal, setShowModal] = useState(false);
-  const [isBlurred, setIsBlurred] = useState(true); // Estado para controlar el blur
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    const animateArrow = () => {
-      let y = 20;
-      let direction = 1;
-      const animate = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        ctx.moveTo(50, y);
-        ctx.lineTo(100, y);
-        ctx.lineTo(75, y + 25);
-        ctx.closePath();
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 4;
-        ctx.stroke();
-        ctx.fillStyle = '#ffffff';
-        ctx.fill();
-
-        y += direction;
-        if (y > 30 || y < 20) direction *= -1;
-        requestAnimationFrame(animate);
-      };
-      animate();
-    };
-
-    animateArrow();
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsBlurred(false); // Quitar el blur al hacer scroll
-      } else {
-        setIsBlurred(true); // Volver a aplicar el blur
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
-
   return (
     <div className="home-container">
-      <div className="top-sections">
-        <div className="container">
-          <h2 className="display-4 text-center title-services">Ofrecemos Soluciones Integrales</h2>
-          <div className="services-card d-flex justify-content-center">
-            <div className="card animated-card mx-2 flag-border">
-              <div className="card-body text-center">
-                <h5 className="card-title">Preparación de Documentos</h5>
-                <ul>
-                  <li>Revisión de documentos</li>
-                  <li>Asesoramiento sobre requisitos</li>
-                  <li>Formulario DS-160: Completamos y enviamos el formulario en línea</li>
-                  <li>Citas en el VAC y la Embajada</li>
-                </ul>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
+            <li><a href="#nuestros-servicios">NUESTROS SERVICIOS</a></li>
+            <li><a href="#testimonios">TESTIMONIOS</a></li>
+            <li><a href="#contactanos">CONTACTANOS</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main>
+        <Hero />
+        <Testimonials />
+        <section className="features">
+          <div className="feature">
+            <p>Nuestra experiencia en el diligenciamiento del formulario DS-160 para solicitud de visas de turismo a Estados Unidos, conocimiento del trámite de visado, y profesionalismo, ha permitido aumentar las probabilidades de aprobación a cada uno de nuestros clientes.</p>
+          </div>
+          <div className="feature">
+            <p>Somos líderes en innovación en América Latina, al integrar inteligencia artificial para analizar y mejorar tus posibilidades de éxito en la solicitud de visa de turismo a Estados Unidos.</p>
+          </div>
+        </section>
+
+        <section className="video-section">
+          {/* Add video component here */}
+        </section>
+
+        <section className="cta-section">
+          <h3>¡Nuestro compromiso es ofrecerte soluciones efectivas para cualquier consulta o inquietud que tengas!</h3>
+          <button className="whatsapp-button">CONTÁCTANOS VÍA WHATSAPP PARA AYUDARTE</button>
+        </section>
+        
+        <section className="quienes-somos">
+          <div className="quienes-somos-content">
+            <h2>¿QUIÉNES SOMOS?</h2>
+            <div className="quienes-somos-flex">
+              <div className="quienes-somos-image">
+                <img src="https://www.buhlerthomaslaw.com/wp-content/uploads/2017/06/Depositphotos_12892153_s-2015.jpg" alt="Formulario DS-160" />
               </div>
-            </div>
-            <div className="card animated-card mx-2 flag-border">
-              <div className="card-body text-center">
-                <h5 className="card-title">Razones para Confiar en Nosotros</h5>
-                <p>Somos expertos en brindar la mejor asesoría para obtener tu visa de turista a los Estados Unidos.</p>
+              <div className="quienes-somos-text">
+                <p>
+                  VisaParaTurista.com ofrece un servicio completo de asesoría y acompañamiento para la obtención de la visa americana de turismo. Tenemos un equipo de expertos altamente calificados y con experiencia en trámites de visado para brindar la orientación necesaria para la obtención de la visa B1 Y B2, individual, familiar y/o grupal. Nuestros profesionales tienen amplios conocimientos en el diligenciamiento del formulario DS-160, así como en el perfilamiento personalizado para la entrevista con el oficial consular de cada uno de nuestros clientes.
+                </p>
+                <p>
+                  Así mismo, VisaParaTurista.com ofrece asesoría en cada paso del proceso de solicitud de visa americana para turistas, desde la presentación de documentos hasta la obtención de la visa. Estamos al tanto de los requerimientos informativos, de seguridad y de aprobación de visas.
+                </p>
+                <p>
+                  Nuestro conocimiento en el diligenciamiento del formulario DS-160, así como nuestro perfilamiento personalizado y preparación para la entrevista con el oficial consular, han demostrado ser de gran ayuda para quienes nos confían su proceso de visa. Gracias a nuestra experiencia y conocimiento, hemos logrado aumentar significativamente las probabilidades de aprobación de nuestros clientes.
+                </p>
               </div>
             </div>
           </div>
-          <Testimonials />
-        </div>
-      </div>
+        </section>
+      </main>
 
-      <div className={`main-content ${isBlurred ? 'blur' : ''}`} style={{ backgroundColor: '#000b82', padding: '20px 0' }}>
-        <h2 className="display-4 text-center text-white">Contáctanos</h2>
-        <div className="contact-container d-flex flex-column align-items-center justify-content-center mx-auto p-4">
-          <img 
-            src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=800&height=800" 
-            alt="Imagen de contacto" 
-            className="contact-image img-fluid rounded mb-4" 
-            style={{ maxWidth: '800px', width: '100%', height: 'auto' }} // Aumentar el tamaño y calidad
-          />
-          <div className="canvas-container mb-3">
-            <canvas ref={canvasRef} width={150} height={70}></canvas>
-          </div>
-          <Button variant="success" onClick={handleShowModal}>
-            Contactar por WhatsApp
-          </Button>
-
-          <Modal show={showModal} onHide={handleCloseModal} centered>
-            <Modal.Header closeButton>
-              <Modal.Title>Contacto</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <p>Teléfono: +1 234 567 890</p>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleCloseModal}>
-                Cerrar
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Testimonials() {
-  const testimonials = [
-    {
-      text: "Gracias a J&Y Asesoría, obtuve mi visa sin complicaciones.",
-      author: "Cliente 1"
-    },
-    {
-      text: "El servicio fue excelente y muy profesional.",
-      author: "Cliente 2"
-    },
-    {
-      text: "Recomiendo totalmente esta asesoría, son los mejores.",
-      author: "Cliente 3"
-    },
-    {
-      text: "Me ayudaron en cada paso del proceso, ¡fantástico!",
-      author: "Cliente 4"
-    },
-    {
-      text: "Una experiencia increíble, muy satisfecho con el resultado.",
-      author: "Cliente 5"
-    }
-  ];
-
-  return (
-    <div className="testimonials-section">
-      <h2 className="display-4 text-center testimonial-title">Testimonios</h2>
-      <div className="testimonial-card">
-        <Carousel>
-          {testimonials.map((testimonial, index) => (
-            <Carousel.Item key={index}>
-              <div className="testimonial-text text-center">
-                <p>"{testimonial.text}"</p>
-                <h5>- {testimonial.author}</h5>
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </div>
+      <footer>
+        {/* Add footer content here */}
+      </footer>
     </div>
   );
 }
