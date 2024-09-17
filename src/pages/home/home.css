@@ -31,15 +31,60 @@ nav ul li a {
 .features {
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
-  background-color: #f0f0f0;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #000080, #0000ff);
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
 }
 
 .feature {
-  flex: 1 1 300px;
-  padding: 1rem;
-  min-width: 300px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  padding: 2rem;
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
 }
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+
 
 .video-section {
   padding: 2rem;
@@ -64,8 +109,20 @@ nav ul li a {
 }
 
 .quienes-somos {
-  padding: 2rem;
-  background-color: #f0f0f0;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.quienes-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #000080, #4169E1, #1E90FF);
 }
 
 .quienes-somos-content {
@@ -75,14 +132,29 @@ nav ul li a {
 
 .quienes-somos h2 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 1rem;
+  color: #000080;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.quienes-somos h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #FFD700;
 }
 
 .quienes-somos-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
+  align-items: center;
 }
 
 .quienes-somos-image {
@@ -93,43 +165,42 @@ nav ul li a {
 .quienes-somos-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.quienes-somos-image img:hover {
+  transform: scale(1.05);
 }
 
 .quienes-somos-text {
-  flex: 1 1 300px;
+  flex: 1 1 500px;
   min-width: 300px;
 }
 
 .quienes-somos-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
 }
 
-footer {
-  background-color: #000080;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+.quienes-somos-text p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .features {
-    flex-direction: column;
+  .quienes-somos {
+    padding: 3rem 1.5rem;
   }
 
   .quienes-somos h2 {
     font-size: 2rem;
   }
 
-  .whatsapp-button {
-    width: 100%;
-    max-width: 300px;
+  .quienes-somos-flex {
+    gap: 2rem;
   }
 }
 
@@ -138,7 +209,7 @@ footer {
     font-size: 1.8rem;
   }
 
-  .feature, .quienes-somos-image, .quienes-somos-text {
+  .quienes-somos-image, .quienes-somos-text {
     min-width: 100%;
   }
 }
