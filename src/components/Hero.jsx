@@ -40,8 +40,8 @@ const Hero = () => {
           Solicita tu asesoría ahora
         </motion.button>
       </div>
-      <div className="hero-image">
-        <img src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=638&height=638" alt="J&C Oficina Virtual" />
+      <div className="hero-image-container">
+        <img src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=638&height=638" alt="J&C Oficina Virtual" className="hero-image" />
       </div>
     </section>
   );

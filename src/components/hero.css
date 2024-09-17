@@ -43,7 +43,7 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Mantén esta transición para una animación suave */
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
   }
@@ -54,7 +54,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Agregar un efecto de onda al hacer hover */
   .hero-cta::before {
     content: '';
     position: absolute;
@@ -73,26 +72,88 @@
     height: 300px;
   }
   
+  .hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
   
-  @media (max-width: 768px) {
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 1024px) {
     .hero {
       flex-direction: column;
       text-align: center;
+      padding: 3rem 1.5rem;
     }
   
     .hero-content {
       margin-bottom: 2rem;
+      max-width: 100%;
     }
   
+    .hero-title {
+      font-size: 2.8rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.6rem;
+    }
+  
+    .hero-tagline {
+      font-size: 1.3rem;
+    }
+  
+    .hero-image-container {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .hero-title {
       font-size: 2.5rem;
     }
   
     .hero-subtitle {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   
     .hero-tagline {
       font-size: 1.2rem;
     }
+  
+    .hero-cta {
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+    }
+  
+    .hero-image-container {
+      max-width: 100%;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .hero-tagline {
+      font-size: 1rem;
+    }
+  }
+  
