@@ -65,7 +65,7 @@ const Hero = () => {
       </div>
       <div className="hero-image-container">
         <motion.img 
-          src="https://i.ibb.co/VJ4Lj7V/b30f7fa8-8d1d-4435-950f-c137340f7cce.jpg" 
+          src="https://i.ibb.co/JHvZSsj/460c85c8-80db-4fee-b446-afac93ec5375.jpg" 
           alt="J&C Oficina Virtual" 
           className="hero-image"
           whileHover={{ scale: 1.05 }}

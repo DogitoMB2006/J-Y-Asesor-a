@@ -8,6 +8,13 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -15,9 +22,9 @@ function Navbar() {
         <h1>J&Y Visado</h1>
       </div>
       <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-        <li><a href="#announcements">Anuncios</a></li>
+        <li><a href="#home" onClick={() => scrollToSection('home')}>Inicio</a></li>
+        <li><a href="#testimonials" onClick={() => scrollToSection('testimonials')}>Testimonios</a></li>
+        <li><a href="#announcements" onClick={() => scrollToSection('announcements')}>Anuncios</a></li>
         <li><a href="https://wa.me/18496533224">Contacto</a></li>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
