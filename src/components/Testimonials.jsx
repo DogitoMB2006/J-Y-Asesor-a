@@ -19,7 +19,7 @@ const testimonials = [
     author: "usuario4"
   },
   {
-    text: "La asesoría de VisaParaTurista.com fue fundamental para el éxito de mi solicitud de visa. ¡Gracias!",
+    text: "La asesoría de J&Y fue fundamental para el éxito de mi solicitud de visa. ¡Gracias!",
     author: "usuario5"
   }
 ];
