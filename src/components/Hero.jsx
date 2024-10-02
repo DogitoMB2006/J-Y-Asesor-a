@@ -34,7 +34,7 @@ const Hero = () => {
         >
           J&Y Visado! 
           <br />
-          Officina virtual.
+          Oficina virtual.
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -65,7 +65,7 @@ const Hero = () => {
       </div>
       <div className="hero-image-container">
         <motion.img 
-          src="https://media.discordapp.net/attachments/1274216273823268926/1285417797513510922/7837668a-614b-495f-b99c-3fd6f91455ef.jpg?ex=66ea321c&is=66e8e09c&hm=afd91f179f2ba87600f8f8ecd5ad175aef2dfc09cb2cab019526e0a5adc21d18&=&format=webp&width=638&height=638" 
+          src="https://i.ibb.co/VJ4Lj7V/b30f7fa8-8d1d-4435-950f-c137340f7cce.jpg" 
           alt="J&C Oficina Virtual" 
           className="hero-image"
           whileHover={{ scale: 1.05 }}

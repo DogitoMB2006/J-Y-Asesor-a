@@ -18,7 +18,7 @@ function Navbar() {
         <li><a href="#home">Inicio</a></li>
         <li><a href="#testimonials">Testimonios</a></li>
         <li><a href="#announcements">Anuncios</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="https://wa.me/18496533224">Contacto</a></li>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="line"></span>
