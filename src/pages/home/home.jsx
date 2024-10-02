@@ -23,7 +23,7 @@ function Home() {
       <i className="fas fa-robot"></i>
     </div>
     <h3>Innovación Tecnológica</h3>
-    <p>Somos líderes en innovación en América Latina, al integrar inteligencia artificial para analizar y mejorar tus posibilidades de éxito en la solicitud de visa de turismo a Estados Unidos.</p>
+    <p>Somos de los primeros en ofrecer consultas y diligenciamientos virtuales, permitiéndote gestionar todo el proceso sin que tengas que moverte de tu casa o de tu trabajo. Evita perder tiempo y complicaciones; contamos con más de 10 años de experiencia en la gestión de solicitudes de visa de turismo a Estados Unidos.</p>
   </div>
 </section>
 
