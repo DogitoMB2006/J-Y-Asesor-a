@@ -109,7 +109,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 J&Y Asesoría. Todos los derechos reservados.
+                © 2025 J&Y Asesoría. Todos los derechos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Servicios de asesoría para visa de turista estadounidense
