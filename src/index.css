@@ -1,15 +1,1 @@
-/* Forzar que el contenedor principal ocupe el 100% del viewport */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Al menos 100% del viewport */
-}
-
-main {
-  flex: 1; /* Esto empuja al footer hacia el fondo */
-}
+@import "tailwindcss";

@@ -6,9 +6,9 @@ import Home from './pages/home/home';
 
 function App() {
   return (
-    <div id="root">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main>
+      <main className="flex-1">
         <Home />
       </main>
       <Footer />
