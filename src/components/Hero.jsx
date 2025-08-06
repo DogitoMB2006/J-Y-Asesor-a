@@ -31,20 +31,16 @@ const Hero = () => {
         setDisplayText(currentFullText.slice(0, displayText.length + 1));
       }, Math.random() * 150 + 50);
     } else if (!isDeleting && displayText === currentFullText) {
-
       timeout = setTimeout(() => {
         setIsDeleting(true);
       }, 2500);
     } else if (isDeleting && displayText !== '') {
-
       timeout = setTimeout(() => {
         setDisplayText(currentFullText.slice(0, displayText.length - 1));
       }, Math.random() * 75 + 30);
     } else if (isDeleting && displayText === '') {
-
       setIsDeleting(false);
       setCurrentTextIndex((prev) => (prev + 1) % heroTexts.length);
-
       timeout = setTimeout(() => {}, 500);
     }
 
@@ -56,14 +52,14 @@ const Hero = () => {
   return (
     <>
       <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 overflow-hidden">
-
+        {/* Background effects */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
-    
+        {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
             <div
@@ -81,15 +77,15 @@ const Hero = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
             
-        
+            {/* Content section */}
             <div className="text-center lg:text-left space-y-8">
-          
+              {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/20 animate-fadeInUp">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 Oficina Virtual Certificada
               </div>
 
-       
+              {/* Title */}
               <div className="space-y-4 animate-fadeInUp delay-200">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                   <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
@@ -101,7 +97,7 @@ const Hero = () => {
                 </h1>
               </div>
               
-   
+              {/* Typewriter effect */}
               <div className="h-20 flex items-center justify-center lg:justify-start animate-fadeInUp delay-300">
                 <div className="relative">
                   <p className="text-lg sm:text-xl text-blue-100 font-medium min-h-[3rem] flex items-center">
@@ -111,12 +107,12 @@ const Hero = () => {
                     <span className={`ml-1 inline-block w-0.5 h-6 bg-yellow-400 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
                   </p>
                   
-       
+                  {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg blur-sm"></div>
                 </div>
               </div>
 
-       
+              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 py-6 animate-fadeInUp delay-400">
                 <div className="text-center lg:text-left">
                   <div className="text-2xl lg:text-3xl font-bold text-yellow-400">500+</div>
@@ -132,7 +128,7 @@ const Hero = () => {
                 </div>
               </div>
 
-           
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fadeInUp delay-500">
                 <button 
                   onClick={toggleModal}
@@ -161,44 +157,47 @@ const Hero = () => {
                 </a>
               </div>
 
-         
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-blue-200 text-sm animate-fadeInUp delay-600">
-                <div className="flex items-center space-x-2">
+              {/* Feature badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeInUp delay-600">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">🇺🇸</div>
+                  <div className="text-white font-semibold text-sm">Visa USA</div>
+                  <div className="text-blue-200 text-xs">B1/B2 Tourism</div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">✅</div>
+                  <div className="text-white font-semibold text-sm">95% Aprobación</div>
+                  <div className="text-blue-200 text-xs">Alta tasa de éxito</div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">⚡</div>
+                  <div className="text-white font-semibold text-sm">Proceso Rápido</div>
+                  <div className="text-blue-200 text-xs">Respuesta inmediata</div>
+                </div>
+              </div>
+
+              {/* Additional info badges */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-blue-200 text-sm">
+                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   <span>100% Virtual</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-200"></div>
                   <span>Proceso Seguro</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-400"></div>
                   <span>Soporte 24/7</span>
                 </div>
               </div>
             </div>
 
-  
+            {/* Image section */}
             <div className="flex justify-center lg:justify-end animate-fadeInUp delay-700">
               <div className="relative max-w-md lg:max-w-lg w-full">
-        
-                <div className="absolute -top-6 -left-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 animate-float">
-                  <div className="text-2xl mb-1">🇺🇸</div>
-                  <div className="text-white font-semibold text-sm">Visa USA</div>
-                  <div className="text-blue-200 text-xs">B1/B2 Tourism</div>
-                </div>
-                
-                <div className="absolute -bottom-6 -right-6 bg-green-500/90 backdrop-blur-lg rounded-2xl p-4 animate-float delay-1000">
-                  <div className="text-2xl mb-1">✅</div>
-                  <div className="text-white font-semibold text-sm">95% Aprobación</div>
-                  <div className="text-green-100 text-xs">Alta tasa de éxito</div>
-                </div>
-
-                <div className="absolute top-1/2 -left-8 bg-yellow-500/90 backdrop-blur-lg rounded-2xl p-3 animate-float delay-500">
-                  <div className="text-xl mb-1">⚡</div>
-                  <div className="text-white font-semibold text-xs">Proceso Rápido</div>
-                </div>
-
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl blur-xl"></div>
                   <img 
@@ -207,7 +206,7 @@ const Hero = () => {
                     className="relative w-full rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 border-2 border-white/20"
                   />
                   
-             
+                  {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent rounded-3xl"></div>
                 </div>
               </div>
@@ -215,7 +214,7 @@ const Hero = () => {
           </div>
         </div>
 
-   
+        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
@@ -223,7 +222,7 @@ const Hero = () => {
         </div>
       </section>
 
-      
+      {/* Modal */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn"
@@ -336,34 +335,6 @@ const Hero = () => {
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
-        
-        /* Typing cursor animation mejorada */
-        @keyframes blink {
-          0%, 50% { 
-            opacity: 1; 
-            transform: scaleY(1);
-          }
-          51%, 100% { 
-            opacity: 0; 
-            transform: scaleY(0.8);
-          }
-        }
-        
-        .cursor-blink {
-          animation: blink 1.2s infinite ease-in-out;
-        }
-        
-        /* Efecto de escritura suave */
-        @keyframes typewriter {
-          from { width: 0; }
-          to { width: 100%; }
-        }
-        
-        .typewriter {
-          overflow: hidden;
-          white-space: nowrap;
-          animation: typewriter 0.1s steps(1, end);
-        }
         .delay-600 { animation-delay: 0.6s; }
         .delay-700 { animation-delay: 0.7s; }
         .delay-1000 { animation-delay: 1s; }
