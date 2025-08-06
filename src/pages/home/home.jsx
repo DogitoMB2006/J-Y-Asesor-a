@@ -4,6 +4,20 @@ import Testimonials from '../../components/Testimonials';
 
 const services = [
   {
+    icon: "💻",
+    title: "Consulta Virtual",
+    description: "Asesoría personalizada 100% online desde la comodidad de tu hogar u oficina.",
+    features: ["Sesiones personalizadas", "Soporte continuo", "Horarios flexibles"],
+    gradient: "from-orange-500 to-red-500"
+  },
+  {
+    icon: "📋",
+    title: "Revisión de Documentos",
+    description: "Análisis y verificación de todos tus documentos para asegurar que cumplan los requisitos.",
+    features: ["Lista de verificación", "Validación completa", "Recomendaciones"],
+    gradient: "from-green-500 to-green-600"
+  },
+  {
     icon: "📝",
     title: "Formulario DS-160",
     description: "Te ayudamos a completar perfectamente tu formulario DS-160 con toda la información correcta y sin errores.",
@@ -16,20 +30,6 @@ const services = [
     description: "Preparación integral para tu entrevista consular con simulacros y consejos estratégicos.",
     features: ["Simulacro de entrevista", "Preguntas frecuentes", "Estrategias de respuesta"],
     gradient: "from-purple-500 to-purple-600"
-  },
-  {
-    icon: "📋",
-    title: "Revisión de Documentos",
-    description: "Análisis y verificación de todos tus documentos para asegurar que cumplan los requisitos.",
-    features: ["Lista de verificación", "Validación completa", "Recomendaciones"],
-    gradient: "from-green-500 to-green-600"
-  },
-  {
-    icon: "💻",
-    title: "Consulta Virtual",
-    description: "Asesoría personalizada 100% online desde la comodidad de tu hogar u oficina.",
-    features: ["Sesiones personalizadas", "Soporte continuo", "Horarios flexibles"],
-    gradient: "from-orange-500 to-red-500"
   }
 ];
 
