@@ -249,7 +249,7 @@ const Hero = () => {
               
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                  ¡Consulta Gratuita!
+                  ¡Consulta Ahora!
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
                   Obtén asesoría personalizada para tu visa de turista a Estados Unidos. 
