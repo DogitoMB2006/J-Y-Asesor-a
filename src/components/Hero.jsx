@@ -12,7 +12,7 @@ const Hero = () => {
     "Especialistas en formulario DS-160 con 95% de éxito",
     "+10 años ayudando dominicanos a viajar a USA",
     "Proceso 100% virtual desde tu hogar",
-    "Consulta gratuita - ¡Empieza hoy mismo!"
+    "Consulta Ahora - ¡Empieza hoy mismo!"
   ];
 
   useEffect(() => {
