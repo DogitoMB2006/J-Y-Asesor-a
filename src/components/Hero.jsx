@@ -202,7 +202,7 @@ const Hero = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl blur-xl"></div>
                   <img 
-                    src="https://i.ibb.co/JHvZSsj/460c85c8-80db-4fee-b446-afac93ec5375.jpg" 
+                    src="https://i.ibb.co/23m00ZSD/Whats-App-Image-2025-08-06-at-12-33-42-PM.jpg" 
                     alt="J&Y Visado - Asesoría de Visas USA" 
                     className="relative w-full rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 border-2 border-white/20"
                   />
