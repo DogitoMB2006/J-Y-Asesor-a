@@ -8,11 +8,11 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const heroTexts = [
-    "Tu visa americana está más cerca de lo que piensas",
-    "Especialistas en formulario DS-160 con 95% de éxito",
-    "+10 años ayudando dominicanos a viajar a USA",
-    "Proceso 100% virtual desde tu hogar",
-    "Consulta Ahora - ¡Empieza hoy mismo!"
+    "Tu visa americana está más cerca de lo que piensas!",
+    "Especialistas en formulario DS-160 con 95% de éxito!",
+    "+10 años ayudando dominicanos a viajar a USA!",
+    "Proceso 100% virtual desde tu hogar!",
+    "Consulta Ahora - ¡Empieza hoy mismo!!"
   ];
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const Hero = () => {
                     <div className="absolute -inset-4 bg-gradient-to-r from-white/30 to-white/30 rounded-3xl blur-xl"></div>
                     <img 
                       src="https://i.ibb.co/23m00ZSD/Whats-App-Image-2025-08-06-at-12-33-42-PM.jpg" 
-                      alt="J&Y Visado - Asesoría de Visas USA" 
+                      alt="J&Y Visado - Asesoría de Visas USA!" 
                       className="relative w-full rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 border-2 border-white/20 ring-4 ring-white/10"
                     />
                     
@@ -115,19 +115,19 @@ const Hero = () => {
               </div>
             
               <div className="text-center lg:text-left space-y-8 order-2 lg:order-1">
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/20 animate-fadeInUp">
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/20 animate-fadeInUp font-roboto">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 Oficina Virtual Certificada
               </div>
 
              
               <div className="space-y-4 animate-fadeInUp delay-200">
-                              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight font-inter">
+                              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight font-roboto italic">
                 <span className="block text-white">
                   J&Y Visado
                 </span>
                 <span className="block text-2xl sm:text-3xl lg:text-4xl mt-4 text-white font-extrabold">
-                  Asesoría de Visas USA
+                  Asesoría de Visas USA!
                 </span>
               </h1>
               </div>
@@ -135,7 +135,7 @@ const Hero = () => {
             
               <div className="h-20 flex items-center justify-center lg:justify-start animate-fadeInUp delay-300">
                 <div className="relative">
-                  <p className="text-lg sm:text-xl text-white/80 font-medium min-h-[3rem] flex items-center font-inter">
+                  <p className="text-lg sm:text-xl text-white/80 font-medium min-h-[3rem] flex items-center font-roboto italic">
                     <span className="inline-block min-w-0">
                       {displayText}
                     </span>
@@ -148,7 +148,7 @@ const Hero = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 py-6 animate-fadeInUp delay-500">
+              <div className="grid grid-cols-3 gap-4 py-6 animate-fadeInUp delay-500 font-roboto">
                 <div className="text-center lg:text-left">
                   <div className="text-2xl lg:text-3xl font-bold text-white">500+</div>
                   <div className="text-sm text-white/70">Visas Aprobadas</div>
@@ -190,7 +190,7 @@ const Hero = () => {
                 </div>
 
              
-                <div className="flex items-center justify-center lg:justify-start gap-6 text-white/80 text-sm">
+                <div className="flex items-center justify-center lg:justify-start gap-6 text-white/80 text-sm font-roboto">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>Respuesta inmediata</span>
@@ -207,7 +207,7 @@ const Hero = () => {
               </div>
 
    
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeInUp delay-600">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeInUp delay-600 font-roboto">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">🇺🇸</div>
                   <div className="text-white font-semibold text-sm">Visa USA</div>
@@ -228,7 +228,7 @@ const Hero = () => {
               </div>
 
        
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-white/70 text-sm">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-white/70 text-sm font-roboto">
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   <span>100% Virtual</span>
