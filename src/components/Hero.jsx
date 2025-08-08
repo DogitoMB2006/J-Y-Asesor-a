@@ -97,7 +97,7 @@ const Hero = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-16">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
               
-              {/* Image section - Mobile first, Desktop adjusted */}
+             
               <div className="flex justify-center animate-fadeInUp delay-700 order-1 lg:order-2 lg:justify-start lg:pl-8">
                 <div className="relative max-w-md lg:max-w-lg w-full">
                   <div className="relative">
@@ -258,7 +258,7 @@ const Hero = () => {
         </button>
       </section>
 
-      {/* Modal */}
+   
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn"

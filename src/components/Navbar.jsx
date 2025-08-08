@@ -17,7 +17,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scroll spy to set active section
+
   useEffect(() => {
     const sectionIds = ['home', 'servicios', 'testimonials', 'quienes-somos'];
     const sections = sectionIds
@@ -52,7 +52,7 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Close mobile on escape
+
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') setIsOpen(false);
@@ -61,12 +61,12 @@ const Navbar = () => {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
-  // Mark mounted for portal usage
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  // Lock scroll when mobile menu is open (prevents background scroll jump on mobile)
+
   useEffect(() => {
     const body = document.body;
     if (isOpen) {
@@ -97,17 +97,14 @@ const Navbar = () => {
     if (!element) return;
     setActiveSection(sectionId);
 
-    // If mobile menu is open, close first, then scroll after unlock/transition
     if (isOpen) {
       setIsOpen(false);
-      // Wait for body unlock/useEffect and overlay fade-out (~300ms)
       setTimeout(() => {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 360);
       return;
     }
 
-    // Desktop or already closed
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -231,7 +228,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-      {/* Mobile Menu Overlay Portal */}
       {isMounted &&
         createPortal(
           <div
@@ -241,7 +237,6 @@ const Navbar = () => {
               isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
-            {/* Animated background overlay with gradient */}
             <div
               className={`absolute inset-0 bg-gradient-to-br from-[#0B2A3D]/90 via-[#0D3548]/90 to-[#0F4054]/90 backdrop-blur-md transition-all duration-500 ${
                 isOpen ? 'opacity-100' : 'opacity-0'
@@ -249,7 +244,6 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               aria-hidden="true"
             >
-              {/* Floating particles for visual appeal */}
               <div className="absolute inset-0 overflow-hidden">
                 {[...Array(8)].map((_, i) => (
                   <div
@@ -268,11 +262,9 @@ const Navbar = () => {
               </div>
             </div>
             
-            {/* Main menu panel with slide-up animation */}
             <div className={`absolute inset-x-0 top-0 bottom-0 bg-gradient-to-br from-white via-gray-50 to-blue-50 shadow-2xl overflow-y-auto overscroll-contain transition-all duration-500 ease-out ${
               isOpen ? 'translate-y-0' : '-translate-y-full'
             }`}>
-              {/* Header with close button */}
               <div className="relative bg-gradient-to-r from-[#0B2A3D] via-[#0D3548] to-[#0F4054] px-6 py-4 shadow-lg">
                 <div className="flex items-center justify-between pt-[max(env(safe-area-inset-top),0.5rem)]">
                   <div className="flex items-center space-x-3">
@@ -300,7 +292,6 @@ const Navbar = () => {
                 <div className="text-white/80 text-sm mt-2">Tu visa americana está más cerca</div>
               </div>
 
-              {/* Navigation menu */}
               <div className="px-6 py-8">
                 <div className="space-y-4">
                   {navItems.map((item, index) => {
@@ -333,7 +324,6 @@ const Navbar = () => {
                   })}
                 </div>
 
-                {/* WhatsApp CTA */}
                 <div className="mt-8">
                   <a
                     href="https://wa.me/18496533224"
@@ -350,7 +340,6 @@ const Navbar = () => {
                   </a>
                 </div>
 
-                {/* Quick stats */}
                 <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                   <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-gray-200">
                     <div className="text-2xl font-bold text-[#0B2A3D]">500+</div>
