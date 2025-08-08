@@ -101,15 +101,15 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden"
+      className="py-20 lg:py-32 bg-gradient-to-br from-[#0B2A3D] via-[#0D3548] to-[#0F4054] relative overflow-hidden"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
  
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -130,12 +130,12 @@ const Testimonials = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
    
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-yellow-400/10 backdrop-blur-sm rounded-full text-yellow-400 text-sm font-medium mb-6 border border-yellow-400/20">
-            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></span>
+          <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6 border border-white/20">
+            <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
             Testimonios Reales
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Lo que dicen nuestros <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">clientes</span>
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-inter">
+            Lo que dicen nuestros <span className="text-white">clientes</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Historias reales de personas que han confiado en nosotros para obtener su visa de turista americana
@@ -188,7 +188,7 @@ const Testimonials = () => {
                       
                
                       <div className="text-center sm:text-left">
-                        <div className="font-bold text-yellow-400 text-lg sm:text-xl">
+                        <div className="font-bold text-white text-lg sm:text-xl">
                           {testimonial.author}
                         </div>
                         <div className="text-gray-300 text-sm">
@@ -203,7 +203,7 @@ const Testimonials = () => {
                       </div>
                     </div>
 
-                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-green-500/90 backdrop-blur-sm rounded-full px-2 py-1 sm:px-3 sm:py-1 text-white text-xs font-semibold flex items-center">
+                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 sm:px-3 sm:py-1 text-[#0B2A3D] text-xs font-semibold flex items-center">
                       <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>

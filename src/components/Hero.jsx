@@ -57,12 +57,12 @@ const Hero = () => {
 
   return (
     <>
-      <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 overflow-hidden">
+      <section id="home" className="relative min-h-screen bg-gradient-to-br from-[#0B2A3D] via-[#0D3548] to-[#0F4054] overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0">
-          <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 bg-indigo-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         {/* Floating particles */}
@@ -107,44 +107,44 @@ const Hero = () => {
 
               {/* Title */}
               <div className="space-y-4 animate-fadeInUp delay-200">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                  <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                    J&Y Visado
-                  </span>
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent font-extrabold">
-                    Asesoría de Visas USA
-                  </span>
-                </h1>
+                              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight font-inter">
+                <span className="block text-white">
+                  J&Y Visado
+                </span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl mt-4 text-white font-extrabold">
+                  Asesoría de Visas USA
+                </span>
+              </h1>
               </div>
               
               {/* Typewriter effect */}
               <div className="h-20 flex items-center justify-center lg:justify-start animate-fadeInUp delay-300">
                 <div className="relative">
-                  <p className="text-lg sm:text-xl text-blue-100 font-medium min-h-[3rem] flex items-center">
+                  <p className="text-lg sm:text-xl text-white/80 font-medium min-h-[3rem] flex items-center font-inter">
                     <span className="inline-block min-w-0">
                       {displayText}
                     </span>
-                    <span className={`ml-1 inline-block w-0.5 h-6 bg-yellow-400 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
+                    <span className={`ml-1 inline-block w-0.5 h-6 bg-white ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
                   </p>
                   
                   {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg blur-sm"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-lg blur-sm"></div>
                 </div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 py-6 animate-fadeInUp delay-500">
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl lg:text-3xl font-bold text-yellow-400">500+</div>
-                  <div className="text-sm text-blue-200">Visas Aprobadas</div>
+                  <div className="text-2xl lg:text-3xl font-bold text-white">500+</div>
+                  <div className="text-sm text-white/70">Visas Aprobadas</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl lg:text-3xl font-bold text-yellow-400">95%</div>
-                  <div className="text-sm text-blue-200">Tasa de Éxito</div>
+                  <div className="text-2xl lg:text-3xl font-bold text-white">95%</div>
+                  <div className="text-sm text-white/70">Tasa de Éxito</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl lg:text-3xl font-bold text-yellow-400">10+</div>
-                  <div className="text-sm text-blue-200">Años de Exp.</div>
+                  <div className="text-2xl lg:text-3xl font-bold text-white">10+</div>
+                  <div className="text-sm text-white/70">Años de Exp.</div>
                 </div>
               </div>
 
@@ -175,17 +175,17 @@ const Hero = () => {
                 </div>
 
                 {/* Trust indicators */}
-                <div className="flex items-center justify-center lg:justify-start gap-6 text-blue-100 text-sm">
+                <div className="flex items-center justify-center lg:justify-start gap-6 text-white/80 text-sm">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>Respuesta inmediata</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>Sin compromiso</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>100% confidencial</span>
                   </div>
                 </div>
@@ -196,34 +196,34 @@ const Hero = () => {
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">🇺🇸</div>
                   <div className="text-white font-semibold text-sm">Visa USA</div>
-                  <div className="text-blue-200 text-xs">B1/B2 Tourism</div>
+                  <div className="text-white/70 text-xs">B1/B2 Tourism</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">✅</div>
                   <div className="text-white font-semibold text-sm">95% Aprobación</div>
-                  <div className="text-blue-200 text-xs">Alta tasa de éxito</div>
+                  <div className="text-white/70 text-xs">Alta tasa de éxito</div>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">⚡</div>
                   <div className="text-white font-semibold text-sm">Proceso Rápido</div>
-                  <div className="text-blue-200 text-xs">Respuesta inmediata</div>
+                  <div className="text-white/70 text-xs">Respuesta inmediata</div>
                 </div>
               </div>
 
               {/* Additional info badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-blue-200 text-sm">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-white/70 text-sm">
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   <span>100% Virtual</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-200"></div>
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-200"></div>
                   <span>Proceso Seguro</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-400"></div>
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-400"></div>
                   <span>Soporte 24/7</span>
                 </div>
               </div>
@@ -233,7 +233,7 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-end animate-fadeInUp delay-700">
               <div className="relative max-w-md lg:max-w-lg w-full">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl blur-xl"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-white/30 to-white/30 rounded-3xl blur-xl"></div>
                   <img 
                     src="https://i.ibb.co/23m00ZSD/Whats-App-Image-2025-08-06-at-12-33-42-PM.jpg" 
                     alt="J&Y Visado - Asesoría de Visas USA" 
@@ -241,7 +241,7 @@ const Hero = () => {
                   />
                   
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2A3D]/20 via-transparent to-transparent rounded-3xl"></div>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ const Hero = () => {
           aria-label="Ver servicios"
         >
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center items-start">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 group-hover:bg-yellow-300 transition-colors"></div>
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 group-hover:bg-white transition-colors"></div>
           </div>
         </button>
       </section>

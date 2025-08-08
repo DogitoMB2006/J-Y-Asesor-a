@@ -67,10 +67,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[#0B2A3D] via-[#0D3548] to-[#0F4054] text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -85,14 +85,14 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold">
-                  J&Y <span className="text-blue-400">Visado</span>
+                <h3 className="text-2xl font-bold font-inter">
+                  J&Y <span className="text-white">Visado</span>
                 </h3>
-                <p className="text-slate-400 text-sm">Tu socio en visas estadounidenses</p>
+                <p className="text-gray-400 text-sm">Tu socio en visas estadounidenses</p>
               </div>
             </div>
             
-            <p className="text-slate-300 leading-relaxed text-lg max-w-md">
+            <p className="text-gray-300 leading-relaxed text-lg max-w-md">
               Más de 10 años ayudando a dominicanos a obtener su visa de turista a Estados Unidos. 
               Servicio 100% virtual con alta tasa de aprobación.
             </p>

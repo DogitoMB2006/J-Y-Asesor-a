@@ -134,19 +134,19 @@ const Navbar = () => {
             aria-label="Ir al inicio"
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div className="relative w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#0B2A3D] to-[#0F4054] rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div className="relative w-10 h-10 bg-gradient-to-br from-[#0B2A3D] to-[#0D3548] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                 <span className="text-white font-bold text-lg">J&Y</span>
               </div>
             </div>
             <div>
-              <h1 className={`text-xl lg:text-2xl font-bold transition-colors duration-300 ${
-                scrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                J&Y <span className="text-blue-600">Visado</span>
-              </h1>
+                          <h1 className={`text-xl lg:text-2xl font-bold transition-colors duration-300 font-inter ${
+              scrolled ? 'text-[#0B2A3D]' : 'text-white'
+            }`}>
+              J&Y <span className={scrolled ? 'text-[#0B2A3D]' : 'text-white'}>Visado</span>
+            </h1>
               <p className={`text-xs hidden sm:block transition-colors duration-300 ${
-                scrolled ? 'text-gray-500' : 'text-blue-100'
+                scrolled ? 'text-gray-500' : 'text-white/80'
               }`}>
                 Tu visa americana
               </p>
@@ -163,11 +163,11 @@ const Navbar = () => {
                   className={`relative px-4 py-2 rounded-xl font-medium text-sm transition-all duration-300 group ${
                     scrolled
                       ? isActive
-                        ? 'text-blue-700'
-                        : 'text-gray-700 hover:text-blue-600'
+                        ? 'text-[#0B2A3D]'
+                        : 'text-gray-700 hover:text-[#0B2A3D]'
                       : isActive
-                        ? 'text-yellow-300'
-                        : 'text-white hover:text-blue-200'
+                        ? 'text-white'
+                        : 'text-white hover:text-white/80'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
@@ -175,12 +175,12 @@ const Navbar = () => {
                   <span
                     className={`absolute inset-0 rounded-xl transition-all duration-300 ${
                       isActive
-                        ? 'bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 shadow-inner'
-                        : 'opacity-0 group-hover:opacity-100 bg-blue-50'
+                        ? 'bg-gradient-to-r from-[#0B2A3D]/10 to-[#0F4054]/10 border border-[#0B2A3D]/20 shadow-inner'
+                        : 'opacity-0 group-hover:opacity-100 bg-white/10'
                     }`}
                   ></span>
                   {isActive && (
-                    <span className="absolute -bottom-[6px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600"></span>
+                    <span className="absolute -bottom-[6px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0B2A3D] to-[#0F4054]"></span>
                   )}
                 </button>
               );
@@ -239,7 +239,7 @@ const Navbar = () => {
           >
             {/* Animated background overlay with gradient */}
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-blue-900/90 via-indigo-900/90 to-purple-900/90 backdrop-blur-md transition-all duration-500 ${
+              className={`absolute inset-0 bg-gradient-to-br from-[#0B2A3D]/90 via-[#0D3548]/90 to-[#0F4054]/90 backdrop-blur-md transition-all duration-500 ${
                 isOpen ? 'opacity-100' : 'opacity-0'
               }`}
               onClick={() => setIsOpen(false)}
@@ -269,14 +269,14 @@ const Navbar = () => {
               isOpen ? 'translate-y-0' : '-translate-y-full'
             }`}>
               {/* Header with close button */}
-              <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 px-6 py-4 shadow-lg">
+              <div className="relative bg-gradient-to-r from-[#0B2A3D] via-[#0D3548] to-[#0F4054] px-6 py-4 shadow-lg">
                 <div className="flex items-center justify-between pt-[max(env(safe-area-inset-top),0.5rem)]">
                   <div className="flex items-center space-x-3">
                     <div className="relative w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
                       <span className="text-white font-bold text-sm">J&Y</span>
                     </div>
                     <div className="text-lg font-bold text-white">
-                      J&Y <span className="text-yellow-300">Visado</span>
+                      J&Y <span className="text-white">Visado</span>
                     </div>
                   </div>
                   <button
@@ -289,7 +289,7 @@ const Navbar = () => {
                     </svg>
                   </button>
                 </div>
-                <div className="text-blue-100 text-sm mt-2">Tu visa americana está más cerca</div>
+                <div className="text-white/80 text-sm mt-2">Tu visa americana está más cerca</div>
               </div>
 
               {/* Navigation menu */}
@@ -303,7 +303,7 @@ const Navbar = () => {
                         onClick={() => scrollToSection(item.id)}
                         className={`group w-full text-left px-6 py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center justify-between transform hover:scale-[1.02] hover:-translate-y-1 ${
                           isActive
-                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
+                            ? 'bg-gradient-to-r from-[#0B2A3D] to-[#0F4054] text-white shadow-lg shadow-[#0B2A3D]/25'
                             : 'bg-white/80 text-gray-800 hover:bg-white hover:shadow-lg border border-gray-100'
                         }`}
                         style={{ animationDelay: `${index * 100}ms` }}
@@ -311,12 +311,12 @@ const Navbar = () => {
                       >
                         <div className="flex items-center space-x-3">
                           <span className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            isActive ? 'bg-yellow-300' : 'bg-blue-500 group-hover:bg-blue-600'
+                            isActive ? 'bg-white' : 'bg-[#0B2A3D] group-hover:bg-[#0D3548]'
                           }`}></span>
                           <span className="text-lg">{item.label}</span>
                         </div>
                         <svg className={`w-5 h-5 transition-transform duration-300 ${
-                          isActive ? 'text-yellow-300' : 'text-gray-400 group-hover:text-blue-600'
+                          isActive ? 'text-white' : 'text-gray-400 group-hover:text-[#0B2A3D]'
                         } ${isActive ? 'rotate-90' : 'group-hover:translate-x-1'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -345,15 +345,15 @@ const Navbar = () => {
                 {/* Quick stats */}
                 <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                   <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-gray-200">
-                    <div className="text-2xl font-bold text-blue-600">500+</div>
+                    <div className="text-2xl font-bold text-[#0B2A3D]">500+</div>
                     <div className="text-xs text-gray-600">Visas</div>
                   </div>
                   <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-gray-200">
-                    <div className="text-2xl font-bold text-green-600">95%</div>
+                    <div className="text-2xl font-bold text-[#0B2A3D]">95%</div>
                     <div className="text-xs text-gray-600">Éxito</div>
                   </div>
                   <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-gray-200">
-                    <div className="text-2xl font-bold text-purple-600">10+</div>
+                    <div className="text-2xl font-bold text-[#0B2A3D]">10+</div>
                     <div className="text-xs text-gray-600">Años</div>
                   </div>
                 </div>
