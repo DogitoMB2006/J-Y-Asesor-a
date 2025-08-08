@@ -58,14 +58,14 @@ const Hero = () => {
   return (
     <>
       <section id="home" className="relative min-h-screen bg-gradient-to-br from-[#0B2A3D] via-[#0D3548] to-[#0F4054] overflow-hidden">
-        {/* Background effects */}
+
         <div className="absolute inset-0">
           <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
-        {/* Floating particles */}
+
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(10)].map((_, i) => (
             <div
@@ -95,17 +95,32 @@ const Hero = () => {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+              
+              {/* Image section - Mobile first, Desktop adjusted */}
+              <div className="flex justify-center animate-fadeInUp delay-700 order-1 lg:order-2 lg:justify-start lg:pl-8">
+                <div className="relative max-w-md lg:max-w-lg w-full">
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-white/30 to-white/30 rounded-3xl blur-xl"></div>
+                    <img 
+                      src="https://i.ibb.co/23m00ZSD/Whats-App-Image-2025-08-06-at-12-33-42-PM.jpg" 
+                      alt="J&Y Visado - Asesoría de Visas USA" 
+                      className="relative w-full rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 border-2 border-white/20 ring-4 ring-white/10"
+                    />
+                    
             
-            {/* Content section */}
-            <div className="text-center lg:text-left space-y-8">
-              {/* Badge */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B2A3D]/20 via-transparent to-transparent rounded-3xl"></div>
+                  </div>
+                </div>
+              </div>
+            
+              <div className="text-center lg:text-left space-y-8 order-2 lg:order-1">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/20 animate-fadeInUp">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 Oficina Virtual Certificada
               </div>
 
-              {/* Title */}
+             
               <div className="space-y-4 animate-fadeInUp delay-200">
                               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight font-inter">
                 <span className="block text-white">
@@ -117,7 +132,7 @@ const Hero = () => {
               </h1>
               </div>
               
-              {/* Typewriter effect */}
+            
               <div className="h-20 flex items-center justify-center lg:justify-start animate-fadeInUp delay-300">
                 <div className="relative">
                   <p className="text-lg sm:text-xl text-white/80 font-medium min-h-[3rem] flex items-center font-inter">
@@ -127,7 +142,7 @@ const Hero = () => {
                     <span className={`ml-1 inline-block w-0.5 h-6 bg-white ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
                   </p>
                   
-                  {/* Glow effect */}
+          
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-lg blur-sm"></div>
                 </div>
               </div>
@@ -148,9 +163,9 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* CTA Section */}
+              
               <div className="space-y-6 animate-fadeInUp delay-400">
-                {/* Primary CTA */}
+              
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <a 
                     href="https://wa.me/18496533224"
@@ -174,7 +189,7 @@ const Hero = () => {
                   </button>
                 </div>
 
-                {/* Trust indicators */}
+             
                 <div className="flex items-center justify-center lg:justify-start gap-6 text-white/80 text-sm">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
@@ -191,7 +206,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Feature badges */}
+   
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeInUp delay-600">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300 group">
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">🇺🇸</div>
@@ -212,7 +227,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Additional info badges */}
+       
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-white/70 text-sm">
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -226,29 +241,12 @@ const Hero = () => {
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-400"></div>
                   <span>Soporte 24/7</span>
                 </div>
-              </div>
+                            </div>
             </div>
-
-            {/* Image section */}
-            <div className="flex justify-center lg:justify-end animate-fadeInUp delay-700">
-              <div className="relative max-w-md lg:max-w-lg w-full">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-white/30 to-white/30 rounded-3xl blur-xl"></div>
-                  <img 
-                    src="https://i.ibb.co/23m00ZSD/Whats-App-Image-2025-08-06-at-12-33-42-PM.jpg" 
-                    alt="J&Y Visado - Asesoría de Visas USA" 
-                    className="relative w-full rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700 border-2 border-white/20 ring-4 ring-white/10"
-                  />
-                  
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2A3D]/20 via-transparent to-transparent rounded-3xl"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
 
-        {/* Scroll indicator (tap to go to servicios) */}
+
         <button
           onClick={() => scrollToSection('servicios')}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer group"
