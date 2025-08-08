@@ -135,8 +135,12 @@ const Navbar = () => {
           >
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#0B2A3D] to-[#0F4054] rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div className="relative w-10 h-10 bg-gradient-to-br from-[#0B2A3D] to-[#0D3548] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                <span className="text-white font-bold text-lg">J&Y</span>
+              <div className="relative w-10 h-10 bg-gradient-to-br from-[#0B2A3D] to-[#0D3548] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300 p-1">
+                <img 
+                  src="/usa-flag.png" 
+                  alt="USA Flag" 
+                  className="w-6 h-6 rounded-full object-cover"
+                />
               </div>
             </div>
             <div>
@@ -272,8 +276,12 @@ const Navbar = () => {
               <div className="relative bg-gradient-to-r from-[#0B2A3D] via-[#0D3548] to-[#0F4054] px-6 py-4 shadow-lg">
                 <div className="flex items-center justify-between pt-[max(env(safe-area-inset-top),0.5rem)]">
                   <div className="flex items-center space-x-3">
-                    <div className="relative w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
-                      <span className="text-white font-bold text-sm">J&Y</span>
+                    <div className="relative w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20 p-1">
+                      <img 
+                        src="/usa-flag.png" 
+                        alt="USA Flag" 
+                        className="w-6 h-6 rounded-full object-cover"
+                      />
                     </div>
                     <div className="text-lg font-bold text-white">
                       J&Y <span className="text-white">Visado</span>
