@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Hero from '../../components/Hero';
 import Testimonials from '../../components/Testimonials';
+import SobreMi from '../../components/SobreMi';
 
 const services = [
   {
@@ -194,6 +195,8 @@ function Home() {
       </section>
 
       <Testimonials />
+
+      <SobreMi />
 
       <section id="quienes-somos" className="py-20 lg:py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

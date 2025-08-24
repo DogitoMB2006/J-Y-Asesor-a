@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
   useEffect(() => {
-    const sectionIds = ['home', 'servicios', 'testimonials', 'quienes-somos'];
+    const sectionIds = ['home', 'servicios', 'testimonials', 'sobre-mi', 'quienes-somos'];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -112,6 +112,7 @@ const Navbar = () => {
     { id: 'home', label: 'Inicio' },
     { id: 'servicios', label: 'Servicios' },
     { id: 'testimonials', label: 'Testimonios' },
+    { id: 'sobre-mi', label: 'Sobre Mí' },
     { id: 'quienes-somos', label: 'Nosotros' }
   ];
 
